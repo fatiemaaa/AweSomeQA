@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test  name="Register With Valid Data">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateRegisterNavigation"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC02_Register">
+                <methods>
+                    <include name="RegisterwithvalidData"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test name="Login with registered email">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginNavigation"/>
+                </methods>
+            </class>
+
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="loginWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Reset password with registered email">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginNavigation"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="validateResetButtonNavigateToResetPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC04_RestPassword">
+                <methods>
+                    <include name="validateResetWithResgisteredEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="Validate Reset Password">-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="ValidateLoginNavigation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+<!--            <class name="testcases.TC03_Login">-->
+<!--                <methods>-->
+<!--                    <include name="validateResetButtonNavigateToLoginPage"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+<!--            <class name="testcases.TC04_RestPassword">-->
+<!--                <methods>-->
+<!--                    <include name="validateResetWithValidEmail"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
