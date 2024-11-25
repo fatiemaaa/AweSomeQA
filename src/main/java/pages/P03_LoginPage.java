@@ -14,14 +14,17 @@ public class P03_LoginPage {
     private final By RESET_BUTTON=By.xpath("//div[2]/a[@href=\"https://awesomeqa.com/ui/index.php?route=account/forgotten\"]");
 
     public P03_LoginPage EnterEmail(String email) throws InterruptedException {
+        Thread.sleep(3000);
         driver.findElement(this.EMAIL_TEXT).sendKeys(email);
         return this;
     }
-    public P03_LoginPage enterPassword(String password){
+    public P03_LoginPage enterPassword(String password) throws InterruptedException {
+        Thread.sleep(3000);
         driver.findElement(this.PASSWORD_TEXT).sendKeys(password);
         return this;
     }
-    public P03_LoginPage Click_Login_Button(){
+    public P03_LoginPage Click_Login_Button() throws InterruptedException {
+        Thread.sleep(3000);
         driver.findElement(this.LOGIN_BUTTON).click();
         return this;
     }

@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test  name="Register With Valid Data">
+    <test name="Register With Valid Data">
         <classes>
             <class name="testcases.TC01_Home">
                 <methods>
                     <include name="ValidateRegisterNavigation"/>
                 </methods>
             </class>
-
             <class name="testcases.TC02_Register">
                 <methods>
                     <include name="RegisterwithvalidData"/>
                 </methods>
             </class>
-
         </classes>
     </test>
     <test name="Login with registered email">
@@ -24,7 +22,6 @@
                     <include name="ValidateLoginNavigation"/>
                 </methods>
             </class>
-
             <class name="testcases.TC03_Login">
                 <methods>
                     <include name="loginWithValidData"/>
@@ -58,18 +55,81 @@
 <!--                    <include name="ValidateLoginNavigation"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-
 <!--            <class name="testcases.TC03_Login">-->
 <!--                <methods>-->
 <!--                    <include name="validateResetButtonNavigateToLoginPage"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-
 <!--            <class name="testcases.TC04_RestPassword">-->
 <!--                <methods>-->
 <!--                    <include name="validateResetWithValidEmail"/>-->
 <!--                </methods>-->
 <!--            </class>-->
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="ValidateSearchBtnNavigation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="VerifySwitchCurrencyToUSD"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
+
+    <test name="SearchForProducts">
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginNavigation"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Login">
+                <methods>
+                    <include name="loginWithValidData"/>
+                </methods>
+            </class>
+            <class name="testcases.TC05_Account">
+                <methods>
+                    <include name="ValidateVerifySearchForProducts"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Create Successful Order">
+        <classes>
+<!--         Home class to open myaccount and choose login   -->
+
+<!--         Login class to login to system   -->
+
+
+<!--          Product class to select product and add to card then click backet pur  -->
+
+
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="ValidateLoginNavigation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="ValidateLoginNavigation"/>
+                    <include name="VerifyAddingItemToCart"/>
+                    <include name="VerifyOpenCheckOutPage"/>
+                </methods>
+            </class>
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="VerifyOpenCheckOutPage"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="testcases.TC06_CheckOut">
+                <methods>
+                    <include name="ValidateVerifyCreatingOrderSuccessfully"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

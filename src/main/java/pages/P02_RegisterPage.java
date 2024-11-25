@@ -11,12 +11,13 @@ public class P02_RegisterPage {
     }
 
     private final By First_Name=By.id("input-firstname");
-    private final By Last_Name=By.xpath("//input[@id='input-lastname']");
-    private final By Email=By.xpath("//input[@id='input-email']");
-    private final By Telefone=By.xpath("//input[@id='input-telephone']");
-    private final By Password=By.xpath("//input[@id='input-password']");
-    private final By Confirm_Password=By.xpath("//input[@id='input-confirm']");
+    private final By Last_Name=By.id("input-lastname");
+    private final By Email=By.id("input-email");
+    private final By Telefone=By.id("input-telephone");
+    private final By Password=By.id("input-password");
+    private final By Confirm_Password=By.id("input-confirm");
     private final By Click_On_TermsandConditions= By.xpath("//input[@name='agree']");
+    private final By Continue_Button= By.xpath("//input[@type=\"submit\"]");
 
     public P02_RegisterPage enterfirstname(String firstname){
         driver.findElement(this.First_Name).sendKeys(firstname);
@@ -44,6 +45,10 @@ public class P02_RegisterPage {
     }
     public P02_RegisterPage ClickOnTermsAndConditions(){
         driver.findElement(this.Click_On_TermsandConditions).click();
+        return this;
+    }
+    public P02_RegisterPage ClickOnContinueButton(){
+        driver.findElement(this.Continue_Button).click();
         return this;
     }
 
